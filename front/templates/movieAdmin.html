@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Move Admin</title>
+</head>
+<nav>
+    <form class="navbar navbar-inverse" role="search">
+        <p class="navbar-text">isysc <a href="#" class="navbar-link">2020 Movie Record Admin</a></p>
+    </form>
+</nav>
+<body>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form method="post" action= "{% url 'set' %}">
+            <div class="form-group">
+                <label for="exampleInputEmail1">电影名字</label>
+                <input class="form-control" id="InputMovieName" name="InputMovieName">
+            </div>
+            <div class="form-group">
+                <label for="leInputImagesUrl">图片链接1</label>
+                <input class="form-control" id="InputImagesUrl" name="InputImagesUrl">
+            </div>
+            <div class="form-group">
+                <label for="InputImagesUrl2">图片链接2</label>
+                <input class="form-control" id="InputImagesUrl2" name="InputImagesUrl2">
+            </div>
+            <div class="form-group">
+                <label for="InputTime">时间</label>
+                <input class="form-control" id="InputTime" name="InputTime">
+            </div>
+            <div class="form-group">
+                <label for="InputScore">豆瓣评分</label>
+                <input class="form-control" id="InputScore" name="InputScore">
+            </div>
+            <div class="form-group">
+                <label for="InputEstimate">想说的话</label>
+                <input class="form-control" id="InputEstimate" name="InputEstimate">
+            </div>
+            <div class="form-group">
+                <label for="InputType">类型</label>
+                <input class="form-control" id="InputType" name="InputType">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</body>
+</html>

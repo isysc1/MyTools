@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Movie Record</title>
+</head>
+<body>
+<nav>
+    <form class="navbar navbar-inverse" role="search">
+        <p class="navbar-text">isysc <a href="#" class="navbar-link">2020 Movie Record </a></p>
+    </form>
+</nav>
+<div class="container-fluid main">
+    {% for i in information %}
+        {% if i.image_url1 %}
+            <h3>jfiweohfohasio</h3>
+        {% endif %}
+
+        <div class="row" style="margin-top: 18px">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <h2>
+                        <span aria-hidden="true"></span>{{ i.name }} </h2>
+                    <hr>
+                    <img width="392px" src= {{ i.image_Url1 }}>
+                    <img width="392px" src= {{ i.image_Url2 }}>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <h3>记录</h3>
+                <div class="jumbotron" style="height: 620px">
+                    <h3>时间：{{ i.time }}</h3>
+                    <h3>豆瓣：{{ i.score }}</h3>
+                    <div></div>
+                    <p>{{ i.reviews }}</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">{{ i.kind }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
